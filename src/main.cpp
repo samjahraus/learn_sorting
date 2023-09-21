@@ -1,10 +1,9 @@
 #include "SortTester.h"
 
 int main() {
-    SortTester tester = SortTester(10, 5);
+    //TestData bubble_data = tester.run_test(algorithm, num_tests, data_size);
+    //std::vector<TestData> batch_data = tester.run_batch_test(num_tests, data_size);
+    //tester.display_results(&bubble_data);
 
-    //tester.run_tests();
-    //tester.display_results();
-
-    //sorter.print_data();
+    SortTester tester = SortTester(1, 5);
 }

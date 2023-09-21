@@ -4,7 +4,7 @@
 
 #include "Sorter.h"
 
-Sorter::Sorter(Algorithm algorithm) {
+Sorter::Sorter(Algorithms algorithm) {
     _algorithm = algorithm;
 }
 
@@ -12,7 +12,7 @@ void Sorter::set_data(std::vector<u32> data_set) {
     _data = data_set;
 }
 
-bool Sorter::sort_data() {
+void Sorter::sort_data() {
 
     switch (_algorithm) {
         case Bubble:
@@ -23,7 +23,13 @@ bool Sorter::sort_data() {
             break;
     }
 
-    return false;
+    bool is_sorted = check_if_sorted();
+
+    if (is_sorted) {
+        std::cout << "Successfully sorted data!\n";
+    } else {
+        std::cout << "Failed to sort the data...\n";
+    }
 }
 
 void Sorter::print_data() {
@@ -34,16 +40,31 @@ void Sorter::print_data() {
 	std::cout << "\n";
 }
 
-bool Sorter::quick_sort() {
+bool Sorter::check_if_sorted() {
+    bool is_sorted = true;
+	for (int i = 0; i < _data.size() - 1; i++) {
+		if (_data[i] > _data[i + 1]) {
+			is_sorted = false;
+		}
+	}
 
-    std::cout << "Quick Sorting...\n";
+	if (is_sorted) {
+		return true;
+	}
 
-    return false;
+	return false;
 }
 
-bool Sorter::bubble_sort() {
+void Sorter::quick_sort() {
 
+    //TODO: Implement
+    std::cout << "Quick Sorting...\n";
+
+}
+
+void Sorter::bubble_sort() {
+
+    //TODO: Implement
     std::cout << "Bubble Sorting...\n"; 
 
-    return false;
 }

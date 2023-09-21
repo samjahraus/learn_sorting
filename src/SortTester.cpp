@@ -12,7 +12,7 @@ SortTester::SortTester(u32 entry_increment, u32 num_tests) {
 
         auto data = generate_data(increment);
 
-        Sorter bubble_sorter = Sorter(Algorithm::Quick);
+        Sorter bubble_sorter = Sorter(Algorithms::Quick);
         bubble_sorter.set_data(data);
         bubble_sorter.print_data();
         bubble_sorter.sort_data();
@@ -33,8 +33,4 @@ std::vector<u32> SortTester::generate_data(u32 num_entries) {
     }
 
     return data;
-}
-
-void SortTester::run_tests() {
-    std::cout << "Running Tests...\n";
 }
