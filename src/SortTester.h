@@ -4,6 +4,11 @@
 
 #include "Sorter.h"
 
+struct SortData {
+    float duration;
+    
+};
+
 struct TestData {
     float average_time;
     float fastest_time;
@@ -14,15 +19,12 @@ struct TestData {
 
 class SortTester {
     private:
+        void start_benchmark();
+        void end_benchmark(TestData &test_data);
 
     public:
-        SortTester(u32 entry_increment, u32 num_tests);
+        SortTester(u32 num_tests, u32 num_elements);
+        SortTester(u32 num_tests, u32 num_increments, u32 increment);
 
         std::vector<u32> generate_data(u32 num_entries);
-
-        void run_test();
-
-        //TODO: Implement
-        void run_tests();
-        void display_results();
 };

@@ -5,7 +5,7 @@ mkdir windows
 
 cd ..
 
-cmake -S . -B ./build/windows -G"Visual Studio 16 2019" -A"x64" 
+cmake -S . -B ./build/windows -G"Visual Studio 17 2022" -A"x64" 
 cd build
 cd windows
 

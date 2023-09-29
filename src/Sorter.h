@@ -19,6 +19,9 @@ class Sorter {
         std::vector<u32> _data;
         Algorithms _algorithm;
 
+        void set_val_by_index(u32 index);
+        u32 get_val_by_index(u32 index);
+
         void standard_sort();
         void bubble_sort();
         void quick_sort();
@@ -33,10 +36,6 @@ class Sorter {
 
         void set_data(std::vector<u32> data_set);
         void sort_data();
-        
-        void set_val_by_index(u32 index);
-
-        u32 get_val_by_index(u32 index);
 
         std::vector<u32> get_data();
 };

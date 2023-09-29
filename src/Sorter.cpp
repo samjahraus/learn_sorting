@@ -15,11 +15,17 @@ void Sorter::set_data(std::vector<u32> data_set) {
 void Sorter::sort_data() {
 
     switch (_algorithm) {
+        case StandardLib:
+            standard_sort();
+            break;
         case Bubble:
             bubble_sort(); 
             break;
         case Quick:
             quick_sort();
+            break;
+        case Merge:
+            merge_sort();
             break;
     }
 
@@ -55,10 +61,10 @@ bool Sorter::check_if_sorted() {
 	return false;
 }
 
-void Sorter::quick_sort() {
+void Sorter::standard_sort() {
 
     //TODO: Implement
-    std::cout << "Quick Sorting...\n";
+    std::cout << "Standard Lib Sorting...\n";
 
 }
 
@@ -66,5 +72,19 @@ void Sorter::bubble_sort() {
 
     //TODO: Implement
     std::cout << "Bubble Sorting...\n"; 
+
+}
+
+void Sorter::quick_sort() {
+
+    //TODO: Implement
+    std::cout << "Quick Sorting...\n";
+
+}
+
+void Sorter::merge_sort() {
+
+    //TODO: Implement
+    std::cout << "Merge Sorting...\n";
 
 }
